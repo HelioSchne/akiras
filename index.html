@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekko Coaching | Breakthrough</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="tech-grid"></div>
+
+    <header class="navbar">
+        <div class="logo">AKIRA<span>'S</span></div>
+        <nav>
+            <ul>
+                <li><a href="#metodo">MÉTODO</a></li>
+                <li><a href="#individual">INDIVIDUAL</a></li>
+                <li><a href="#planos">PLANOS</a></li>
+            </ul>
+        </nav>
+        <a href="#individual" class="btn-top">SIMULAR ELO</a>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="content">
+                <div class="badge">🔥 NOVO MÉTODO 2026</div>
+                <h1 class="main-title">DOMINE O <br><span class="highlight">TEMPO E O ELO</span></h1>
+                <p class="description">
+                    Não jogue apenas com as mãos. Jogue com estratégia. Analisamos seu replay 
+                    e criamos um cronograma de evolução baseado em dados e performance.
+                </p>
+                
+                <div class="actions">
+                    <a href="#planos" class="btn-primary">QUERO EVOLUIR</a>
+                    <a href="#metodo" class="btn-secondary">COMO FUNCIONA</a>
+                </div>
+
+                <div class="footer-tags">
+                    <span>✓ 100% SEGURO</span>
+                    <span>✓ COACHES CHALLENGER</span>
+                    <span>✓ SUPORTE INSTANTÂNEO</span>
+                </div>
+            </div>
+
+            <div class="visual">
+                <div class="ekko-frame">
+                    <img src="./images/ekkoelo.png" width="500px" height="300px" alt="Ekko Illustration">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="how" id="metodo">
+        <div class="how-header">
+            <h2>COMO FUNCIONA</h2>
+            <div class="line"></div>
+            <p>Nosso processo direto ao ponto para alavancar seu elo.</p>
+        </div>
+
+        <div class="cards-container">
+            <div class="card" data-number="01">
+                <h3>Contratação e Segurança</h3>
+                <p>Pagamento único e seguro. Confirmou? Você já cai direto no WhatsApp do Fatal com tudo pronto.</p>
+            </div>
+
+            <div class="card" data-number="02">
+                <h3>Análise Profunda (VOD)</h3>
+                <p>Identificamos vícios de gameplay que te prendem no elo atual e corrigimos rota e visão.</p>
+            </div>
+
+            <div class="card" data-number="03">
+                <h3>Evolução e Resultado</h3>
+                <p>Sua rotina de treinos é personalizada e o acompanhamento é diário até atingir o elo contratado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="coach-individual" id="individual">
+        <div class="container-limit">
+            <div class="section-header">
+                <h2>COACH INDIVIDUAL</h2>
+                <div class="line"></div>
+                <p>Evolua sua gameplay com aulas particulares dedicadas.</p>
+            </div>
+
+            <div class="coach-grid">
+                <div class="coach-visual">
+                    <div class="champion-card">
+                        <div class="card-overlay">
+                            <h3>Masterize seu Campeão</h3>
+                            <p>Aprenda os segredos da rota, controle de mapa e tomada de decisão.</p>
+                        </div>
+                    </div>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <span>🎯</span><div><h4>Análise de Replay</h4><p>Identificação pontual de erros.</p></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span>🧠</span><div><h4>Micro e Macro</h4><p>Conceitos avançados de jogo.</p></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span>🛡️</span><div><h4>Mentalidade</h4><p>Postura para subir de elo.</p></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span>⏱️</span><div><h4>55 Minutos</h4><p>Duração de cada sessão.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <h3>Monte seu Pacote</h3>
+                    <div class="control-group">
+                        <label>QUANTIDADE DE AULAS</label>
+                        <div class="counter-wrapper">
+                            <button onclick="updatePrice(-1)">-</button>
+                            <input type="text" id="qtd-aulas" value="1" readonly>
+                            <button onclick="updatePrice(1)">+</button>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label>CUPOM DE DESCONTO</label>
+                        <div class="coupon-wrapper">
+                            <input type="text" placeholder="CÓDIGO">
+                            <button class="btn-apply">APLICAR</button>
+                        </div>
+                    </div>
+                    <div class="price-summary">
+                        <div class="row">
+                            <span>Preço unitário</span>
+                            <span>R$ 30,00</span>
+                        </div>
+                        <div class="row total">
+                            <span>Total</span>
+                            <span id="total-price">R$ 30,00</span>
+                        </div>
+                    </div>
+                    <button class="btn-schedule" onclick="agendarWhatsapp()">AGENDAR AULAS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plans-section" id="planos">
+        <div class="container-limit">
+            <div class="section-header">
+                <h2>PLANOS — A DIFERENÇA</h2>
+                <div class="line"></div>
+                <p>Escolha o nível de acompanhamento ideal para sua jornada.</p>
+            </div>
+
+            <div class="plans-grid">
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>PLANO BÁSICO</h3>
+                        <p>Para quem quer resultado rápido e direto.</p>
+                    </div>
+                    <ul class="feature-list">
+                        <li><span>✓</span> Coach padrão focado em metas</li>
+                        <li><span>✓</span> Uma aula a cada 8 partidas</li>
+                        <li><span>✓</span> Suporte via Discord</li>
+                        <li><span>✓</span> Uma semana de acompanhamento</li>
+                        <li><span>✓</span> Análise de VOD</li>
+                        <li class="disabled"><span></span></li>
+                    </ul>
+                    <div class="plan-price">R$ 200,00</div>
+                    <button class="btn-plan" onclick="selectPlan('Plano Básico', '200,00')">ESCOLHER BÁSICO</button>
+                </div>
+
+                <div class="plan-card featured">
+                    <div class="badge-rec">RECOMENDADO</div>
+                    <div class="plan-header">
+                        <h3>PLANO PRO</h3>
+                        <p>Especialize-se e domine o jogo.</p>
+                    </div>
+                    <ul class="feature-list">
+                        <li><span>✓</span> Coach padrão focado em metas</li>
+                        <li><span>✓</span> Uma aula a cada 7 partidas</li>
+                        <li><span>✓</span> Suporte via Discord</li>
+                        <li><span>✓</span> Uma quinzena de acompanhamento</li>
+                        <li><span>✓</span> Análise de VOD</li>
+                    </ul>
+                    <div class="plan-price highlight-price">R$ 300,00</div>
+                    <button class="btn-plan btn-featured" onclick="selectPlan('Plano PRO', '300,00')">QUERO EVOLUIR</button>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>ULTIMATE</h3>
+                        <p>A experiência competitiva completa.</p>
+                    </div>
+                    <ul class="feature-list">
+                        <li><span>✓</span> Coach padrão focado em metas</li>
+                        <li><span>✓</span> Uma aula a cada 6 partidas</li>
+                        <li><span>✓</span> Um mês de acompanhamento</li>
+                        <li><span>✓</span> Plantão de Dúvidas 24h</li>
+                        <li><span>✓</span> Suporte via Discord</li>
+                        <li><span>✓</span> Acesso a pessoas High Elo</li>   
+                    </ul>
+                    <div class="plan-price">R$ 500,00</div>
+                    <button class="btn-plan" onclick="selectPlan('Plano Ultimate', '500,00')">VIRAR LENDA</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="cyber-divider"></div>
+
+    <section class="elo-calculator" id="simulador">
+        <div class="container-limit">
+            
+            <div class="section-header">
+                <h2>CALCULADORA DE ELO</h2>
+                <div class="line"></div>
+                <p>Simule o valor para atingir o elo desejado e contrate agora.</p>
+            </div>
+
+            <div class="calculator-wrapper">
+                
+                <div class="calc-inputs-box">
+                    <div class="rank-selection-row">
+                        
+                        <div class="rank-column">
+                            <div class="dot-title">
+                                <span class="dot current"></span> ONDE VOCÊ ESTÁ?
+                            </div>
+                            <div class="rank-img-display">
+                                <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-silver.png" id="img-current" alt="Elo Atual">
+                            </div>
+                            
+                            <label>Liga</label>
+                            <div class="select-wrapper">
+                                <select id="current-tier" onchange="calcElo()">
+                                    <option value="0">Ferro</option>
+                                    <option value="1">Bronze</option>
+                                    <option value="2" selected>Prata</option>
+                                    <option value="3">Ouro</option>
+                                    <option value="4">Platina</option>
+                                    <option value="5">Esmeralda</option>
+                                    <option value="6">Diamante</option>
+                                </select>
+                            </div>
+
+                            <label>Divisão</label>
+                            <div class="select-wrapper">
+                                <select id="current-div" onchange="calcElo()">
+                                    <option value="0">IV</option>
+                                    <option value="1">III</option>
+                                    <option value="2">II</option>
+                                    <option value="3">I</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="rank-column">
+                            <div class="dot-title">
+                                <span class="dot desired"></span> ONDE QUER CHEGAR?
+                            </div>
+                            <div class="rank-img-display">
+                                <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-gold.png" id="img-desired" alt="Elo Desejado">
+                            </div>
+
+                            <label>Liga</label>
+                            <div class="select-wrapper">
+                                <select id="desired-tier" onchange="calcElo()">
+                                    <option value="0">Ferro</option>
+                                    <option value="1">Bronze</option>
+                                    <option value="2">Prata</option>
+                                    <option value="3" selected>Ouro</option>
+                                    <option value="4">Platina</option>
+                                    <option value="5">Esmeralda</option>
+                                    <option value="6">Diamante</option>
+                                </select>
+                            </div>
+
+                            <label>Divisão</label>
+                            <div class="select-wrapper">
+                                <select id="desired-div" onchange="calcElo()">
+                                    <option value="0">IV</option>
+                                    <option value="1">III</option>
+                                    <option value="2">II</option>
+                                    <option value="3">I</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-type-row">
+                        <label>Tipo de Serviço</label>
+                        <div class="select-wrapper">
+                            <select id="service-type" onchange="calcElo()">
+                                <option value="1">Elojob (Solo - Mais Barato)</option>
+                                <option value="1.5">DuoBoost (Jogue com o Coach)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-summary-box">
+                    <div class="summary-header">
+                        <div class="border-left"></div> RESUMO DO PEDIDO
+                    </div>
+
+                    <div class="visual-progress">
+                        <img src="" id="mini-start" alt="">
+                        <div class="progress-line"></div>
+                        <img src="" id="mini-end" alt="">
+                    </div>
+                    <div class="visual-labels">
+                        <span id="label-start">Prata IV</span>
+                        <span id="label-end">Ouro IV</span>
+                    </div>
+
+                    <label class="coupon-label">CUPOM DE DESCONTO</label>
+                    <div class="coupon-wrapper">
+                        <input type="text" placeholder="AKIRA10">
+                        <button class="btn-apply">APLICAR</button>
+                    </div>
+
+                    <div class="divider-dashed"></div>
+
+                    <div class="calc-row">
+                        <span>Valor base</span>
+                        <span id="base-price">R$ 0,00</span>
+                    </div>
+
+                    <div class="calc-total">
+                        <span>Total</span>
+                        <span id="final-price">R$ 0,00</span>
+                    </div>
+
+                    <button class="btn-schedule" onclick="hireBoost()">
+                        <span style="margin-right: 10px">💬</span> CONTRATAR AGORA
+                    </button>
+                    <p class="security-note">PAGAMENTO SEGURO VIA WHATSAPP</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container-limit">
+            
+            <div class="footer-top">
+                <div class="footer-info">
+                    <div class="logo">AKIRA<span>'S</span></div>
+                    <p class="footer-quote">
+                        "Não importa quanto tempo você tem,<br>
+                        mas como você o usa."
+                        <span>— Ekko (Chronobreak)</span>
+                    </p>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>NAVEGAÇÃO</h4>
+                    <ul>
+                        <li><a href="#metodo">Método</a></li>
+                        <li><a href="#individual">Individual</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Akira Coaching. Todos os direitos reservados.</p>
+                <p class="developer">Desenvolvido por <span class="dev-highlight">PARCEIRO</span></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // --- CONFIGURAÇÃO ---
+        const precoPorAula = 30.00; 
+        const telefone = "5555997212045"; // Seu número configurado
+
+        // --- ELEMENTOS HTML ---
+        const inputAulas = document.getElementById('qtd-aulas');
+        const displayTotal = document.getElementById('total-price');
+
+        // --- FUNÇÃO 1: ATUALIZAR PREÇO (Calculadora) ---
+        function updatePrice(mudanca) {
+            let aulasAtuais = parseInt(inputAulas.value);
+            let novasAulas = aulasAtuais + mudanca;
+            if (novasAulas < 1) novasAulas = 1;
+            inputAulas.value = novasAulas;
+            let total = novasAulas * precoPorAula;
+            displayTotal.innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            displayTotal.style.color = 'white';
+            setTimeout(() => { displayTotal.style.color = 'var(--cyan)'; }, 150);
+        }
+
+        // --- FUNÇÃO 2: WHATSAPP DA CALCULADORA ---
+        function agendarWhatsapp() {
+            let aulas = inputAulas.value;
+            let totalTexto = displayTotal.innerText;
+            let mensagem = `Olá! Gostaria de contratar o Coach Individual.%0a`;
+            mensagem += `Quantidade de aulas: *${aulas}*%0a`;
+            mensagem += `Valor Total: *${totalTexto}*%0a`;
+            mensagem += `Como podemos prosseguir com o pagamento?`;
+            let url = `https://wa.me/${telefone}?text=${mensagem}`;
+            window.open(url, '_blank');
+        }
+
+        // --- FUNÇÃO 3: WHATSAPP DOS PLANOS (NOVA) ---
+        function selectPlan(nomePlano, valorPlano) {
+            let mensagem = `Fala Akira! Tenho interesse no *${nomePlano}*.%0a`;
+            mensagem += `Valor do Investimento: *R$ ${valorPlano}*%0a`;
+            mensagem += `Quero começar minha evolução agora!`;
+            
+            let url = `https://wa.me/${telefone}?text=${mensagem}`;
+            window.open(url, '_blank');
+        }
+
+       
+    const precoPorAulaCoaching = 30.00;
+
+    // Preços por divisão de cada elo
+    const precosElo = {
+        "Ferro": 9,
+        "Bronze": 11,
+        "Prata": 14,
+        "Ouro": 17,
+        "Platina": 24,
+        "Esmeralda": 47,
+        "Diamante": 60
+    };
+
+    const elosOrder = ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Esmeralda", "Diamante"];
+    const divLabels = ["IV", "III", "II", "I"];
+
+    // Links de imagens (Community Dragon)
+    const eloImages = {
+        "Ferro": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-iron.png",
+        "Bronze": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-bronze.png",
+        "Prata": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-silver.png",
+        "Ouro": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-gold.png",
+        "Platina": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-platinum.png",
+        "Esmeralda": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-emerald.png",
+        "Diamante": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-diamond.png"
+    };
+
+    // --- FUNÇÕES DA CALCULADORA DE ELO ---
+
+    function calcElo() {
+        // Pegar valores atuais
+        const sTierIdx = parseInt(document.getElementById('current-tier').value);
+        const sDivIdx = parseInt(document.getElementById('current-div').value);
+        const dTierIdx = parseInt(document.getElementById('desired-tier').value);
+        const dDivIdx = parseInt(document.getElementById('desired-div').value);
+        const multiplicadorServico = parseFloat(document.getElementById('service-type').value);
+
+        const sTierName = elosOrder[sTierIdx];
+        const dTierName = elosOrder[dTierIdx];
+
+        // 1. Atualizar Imagens e Labels Visuais
+        document.getElementById('img-current').src = eloImages[sTierName];
+        document.getElementById('img-desired').src = eloImages[dTierName];
+        document.getElementById('mini-start').src = eloImages[sTierName];
+        document.getElementById('mini-end').src = eloImages[dTierName];
+        
+        document.getElementById('label-start').innerText = `${sTierName} ${divLabels[sDivIdx]}`;
+        document.getElementById('label-end').innerText = `${dTierName} ${divLabels[dDivIdx]}`;
+
+        // 2. Validação: O destino é maior que a origem?
+        // No LoL, Divisão 3 (I) é maior que Divisão 0 (IV)
+        const totalOrigem = (sTierIdx * 4) + sDivIdx;
+        const totalDestino = (dTierIdx * 4) + dDivIdx;
+
+        if (totalDestino <= totalOrigem) {
+            document.getElementById('base-price').innerText = "R$ 0,00";
+            document.getElementById('final-price').innerText = "Inválido";
+            return;
+        }
+
+        // 3. Cálculo do Preço (Degrau por degrau)
+        let precoTotal = 0;
+        let cTier = sTierIdx;
+        let cDiv = sDivIdx;
+
+        while (!(cTier === dTierIdx && cDiv === dDivIdx)) {
+            precoTotal += precosElo[elosOrder[cTier]];
+            
+            if (cDiv === 3) { // Se está na Divisão I, pula pro próximo elo na Divisão IV
+                cTier++;
+                cDiv = 0;
+            } else {
+                cDiv++;
+            }
+        }
+
+        const precoFinal = precoTotal * multiplicadorServico;
+
+        // 4. Exibir Resultados
+        document.getElementById('base-price').innerText = `R$ ${precoTotal.toFixed(2).replace('.', ',')}`;
+        document.getElementById('final-price').innerText = `R$ ${precoFinal.toFixed(2).replace('.', ',')}`;
+    }
+
+    function hireBoost() {
+        const preco = document.getElementById('final-price').innerText;
+        if (preco === "Inválido" || preco === "R$ 0,00") {
+            alert("Selecione um elo de destino válido!");
+            return;
+        }
+
+        const origem = document.getElementById('label-start').innerText;
+        const destino = document.getElementById('label-end').innerText;
+        const servico = document.getElementById('service-type').options[document.getElementById('service-type').selectedIndex].text;
+
+        let msg = `Olá Akira! Gostaria de contratar um serviço:%0a`;
+        msg += `📌 Serviço: *${servico}*%0a`;
+        msg += `🚩 De: *${origem}*%0a`;
+        msg += `🏆 Para: *${destino}*%0a`;
+        msg += `💰 Valor: *${preco}*`;
+
+        window.open(`https://wa.me/${telefone}?text=${msg}`, '_blank');
+    }
+
+    // --- FUNÇÕES DO COACH INDIVIDUAL (EXISTENTES) ---
+
+    function updatePrice(mudanca) {
+        const inputAulas = document.getElementById('qtd-aulas');
+        const displayTotal = document.getElementById('total-price');
+        let aulasAtuais = parseInt(inputAulas.value);
+        let novasAulas = Math.max(1, aulasAtuais + mudanca);
+        
+        inputAulas.value = novasAulas;
+        let total = novasAulas * precoPorAulaCoaching;
+        displayTotal.innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
+    function agendarWhatsapp() {
+        const aulas = document.getElementById('qtd-aulas').value;
+        const total = document.getElementById('total-price').innerText;
+        let msg = `Olá! Gostaria de agendar *${aulas}* aulas de Coach Individual (Total: ${total}).`;
+        window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function selectPlan(nome, valor) {
+        let msg = `Fala Akira! Tenho interesse no *${nome}* (R$ ${valor}). Quero evoluir!`;
+        window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // Inicializar calculadora ao carregar a página
+    window.onload = calcElo;
+    </script>
+  
+</body>
+</html>
